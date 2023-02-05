@@ -127,23 +127,23 @@ function App() {
       <div className="vertcenter">
         <div className="minidisplay">
           {
-            String(Math.max(elapsedMinutes, 0)).padStart(2, '0').split('').map((digit, index) => (<SevenSegment key={index} digit={digit} onColor="rgba(150,50,50, .8)" />))
+            String(Math.max(elapsedMinutes, 0)).padStart(2, '0').split('').map((digit, index) => (<SevenSegment key={index} digit={digit} onColor="rgba(238,170,102, .6)" />))
           }
           <div className="colon">
             <svg viewBox="0 0 24 150" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="50" r="6" fill="rgba(150,50,50, .8)" />
-              <circle cx="12" cy="100" r="6" fill="rgba(150,50,50, .8)" />
+              <circle cx="12" cy="50" r="6" fill="rgba(238,170,102, .6)" />
+              <circle cx="12" cy="100" r="6" fill="rgba(238,170,102, .6)" />
             </svg>
           </div>
           {
-            String(Math.max(elapsedSeconds, 0)).padStart(2, '0').split('').map((digit, index) => (<SevenSegment key={index} digit={digit} onColor="rgba(150,50,50, .8)" />))
+            String(Math.max(elapsedSeconds, 0)).padStart(2, '0').split('').map((digit, index) => (<SevenSegment key={index} digit={digit} onColor="rgba(238,170,102, .6)" />))
           }
           <div className="period">
             <svg viewBox="0 0 24 150" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="6" cy="140" r="6" fill="rgba(150,50,50, .8)" />
+              <circle cx="6" cy="140" r="6" fill="rgba(238,170,102, .6)" />
             </svg>
           </div>
-          <SevenSegment digit={elapsedTenths} onColor="rgba(150,50,50, .8)" />
+          <SevenSegment digit={elapsedTenths} onColor="rgba(238,170,102, .6)" />
         </div>
         <div className="display">
           {
