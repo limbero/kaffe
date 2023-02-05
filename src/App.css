@@ -1,6 +1,16 @@
-body {
+@font-face {
+  font-family: "SevenSegment";
+  src: url("SevenSegment.ttf") format("truetype");
+}  
+
+body, html {
   background: #2A1A1A;
   overflow: hidden;
+  font-size: 10vw;
+  transition: background .1s;
+}
+body:active {
+  background: #443333;
 }
 
 .kaffe {
@@ -9,33 +19,52 @@ body {
   height: 100vh;
   position: relative;
 
-  font-size: 20vw;
   color: #EEAA66;
 }
 
-.display {
-  width: 100vw;
-
+.vertcenter {
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%) skew(-5deg);
-  -webkit-transform: translate(-50%,-50%) skew(-5deg);
-  transform: translate(-50%,-50%) skew(-5deg);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.display {
+  width: 100vw;
+  -ms-transform: skew(-5deg);
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
 }
 
 .sevenSegment {
   display: inline-block;
   position: relative;
-  width: 20vw;
-  height: 30vw;
+  width: 16vw;
+  height: 24vw;
   vertical-align: bottom;
 }
 .colon {
   display: inline-block;
   vertical-align: bottom;
-  width: 5vw;
-  height: 30vw;
+  width: 4vw;
+  height: 24vw;
+}
+.period {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 4vw;
+  height: 24vw;
+}
+
+.explanation {
+  font-family: "SevenSegment";
+  -ms-transform: skew(-5deg);
+  -webkit-transform: skew(-5deg);
+  transform: skew(-5deg);
+
+  margin-top: 5vh;
+  font-size: 0.75rem;
 }
 
 .sevenSegment svg, .colon svg {

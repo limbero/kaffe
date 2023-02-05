@@ -37,6 +37,7 @@ function SevenSegment({digit}) {
           Array.from(Array(7).keys())
             .map(segno => (
               <polygon
+                key={segno}
                 points="10,15 15,20 60,20 65,15 60,10 15,10"
                 fill={PATTERNS[digit][segno] === 'T' ? "#EEAA66" : "rgba(150,50,50, 0.1)"}
                 transform={`translate(${OFFSETS[segno]}) rotate(${ROTATIONS[segno]} 10 15)`}
