@@ -29,7 +29,7 @@ const ROTATIONS = [
   "0",
 ];
 
-function SevenSegment({digit}) {
+function SevenSegment({digit, onColor="#EEAA66", offColor="rgba(150,50,50, 0.1)"}) {
   return (
     <div className="sevenSegment">
       <svg viewBox="0 0 75 150" xmlns="http://www.w3.org/2000/svg">
@@ -39,7 +39,7 @@ function SevenSegment({digit}) {
               <polygon
                 key={segno}
                 points="10,15 15,20 60,20 65,15 60,10 15,10"
-                fill={PATTERNS[digit][segno] === 'T' ? "#EEAA66" : "rgba(150,50,50, 0.1)"}
+                fill={PATTERNS[digit][segno] === 'T' ? onColor : offColor}
                 transform={`translate(${OFFSETS[segno]}) rotate(${ROTATIONS[segno]} 10 15)`}
               />
             ))

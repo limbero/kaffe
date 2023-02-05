@@ -36,6 +36,24 @@ body:active {
   -webkit-transform: skew(-5deg);
   transform: skew(-5deg);
 }
+.minidisplay {
+  height: 6vw;
+  margin-bottom: 3vw;
+}
+.minidisplay .sevenSegment,
+.minidisplay .colon,
+.minidisplay .period,
+.minidisplay svg {
+  vertical-align: top;
+}
+.minidisplay .sevenSegment {
+  width: 4vw;
+  height: 6vw;
+}
+.minidisplay .colon, .minidisplay .period {
+  width: 1vw;
+  height: 6vw;
+}
 
 .sevenSegment {
   display: inline-block;
