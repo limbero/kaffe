@@ -1,17 +1,44 @@
 body {
-  background: #532;
+  background: #2A1A1A;
+  overflow: hidden;
 }
 
 .kaffe {
   text-align: center;
-  padding: 15px;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+
+  font-size: 20vw;
+  color: #EEAA66;
+}
+
+.display {
+  width: 100vw;
+
   position: absolute;
   top: 50%;
   left: 50%;
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -ms-transform: translateX(-50%) translateY(-50%) skew(-5deg);
+  -webkit-transform: translate(-50%,-50%) skew(-5deg);
+  transform: translate(-50%,-50%) skew(-5deg);
+}
 
-  font-size: 20vw;
-  color: saddlebrown;
+.sevenSegment {
+  display: inline-block;
+  position: relative;
+  width: 20vw;
+  height: 30vw;
+  vertical-align: bottom;
+}
+.colon {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 5vw;
+  height: 30vw;
+}
+
+.sevenSegment svg, .colon svg {
+  width: 100%;
+  height: 100%;
 }
